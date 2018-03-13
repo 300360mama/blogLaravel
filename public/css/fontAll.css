@@ -1,0 +1,256 @@
+ @font-face{
+    font-family: Pacifico;
+    src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
+    }
+
+@font-face{
+	font-family: HindReg;
+	src: url('../fonts/Hind/Hind-Regular.ttf');
+}
+@font-face{
+	font-family: HindSemiBold;
+	src: url('../fonts/Hind/Hind-SemiBold.ttf');
+}
+@font-face{
+	font-family: HindLight;
+	src: url('../fonts/Hind/Hind-Light.ttf');
+}
+
+@font-face{
+	font-family: HindMedium;
+	src: url('../fonts/Hind/Hind-Medium.ttf');
+}
+@font-face{
+	font-family: HindBold;
+	src: url('../fonts/Hind/Hind-Bold.ttf');
+
+}
+
+@font-face{
+	font-family: MontserratBold;
+	src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face{
+	font-family: OpenSansLight;
+	src: url('../fonts/OpenSans-Light.ttf');
+}
+
+html{
+	font-size: 100%;
+}
+
+/* Header */
+header .fa, header ul a{
+	color: #ffffff;
+}
+header .fa{
+	font-size: 16px;
+}
+
+header ul a{
+	font: 18px HindLight;
+}
+
+header ul a:hover, header .fa:hover{
+	color: #999999;
+}
+
+header .logo{
+	font: 20px Pacifico;
+}
+
+/* Banner */
+.bannerNews span, .bannerNews h6{
+	color: #ffffff;
+}
+
+.bannerNews span{
+	font: 18px HindSemiBold;
+}
+
+.bannerNews h6{
+	font: 40px HindBold;
+}
+
+.switchSlide .switch .text{
+	color: #ffffff;
+	font: 14px HindSemiBold;
+}
+
+.switch .arrow{
+	color: #fff;
+}
+
+
+/* newsLetter */
+
+.newsLetter form span{
+	color: #212121;
+	font: 20px MontserratBold;
+	line-height: 28px;
+}
+
+.newsLetter form input::placeholder{
+	color: #999999;
+	font: 15px HindLight;
+
+}
+
+.newsLetter form input.submit{
+	color: #ffffff;
+	font: 14px HindMedium;
+
+}
+
+
+/* content main */
+
+.post .article .category, .article .authorArticle, 
+.post .article .infoArticle{
+	font: 16px HindReg;
+	color: #999999;
+}
+
+.post .article .theme{
+	font: 28px MontserratBold;
+	color: #212121;
+}
+
+.post .article article{
+	font: 16px HindLight;
+	color: #464646;
+}
+
+.post .article a.readMore{
+	font: 14px HindMedium;
+	color: #212121;
+}
+
+.post .infoArticle .comment{
+	font: 16px HindReg;
+	color: #999999;
+}
+.post .infoArticle .comment .fa{
+	font-size: 11px;
+}
+
+.post .infoArticle .social a{
+	font-size: 18px;
+	color: #464646;
+}
+
+main .citacion .myCitate{
+	font: 20px HindMedium;
+	color: #ffffff;
+
+}
+
+main .citacion .authorCitate{
+	font: 16px HindReg;
+	color: #999999;
+	
+
+}
+
+aside .categories{
+	color: #212121;
+}
+
+aside .categories h5, aside .latestPost h5{
+	font: 20px MontserratBold;
+}
+
+aside .categories .listCategories,
+aside .latestPost .postText{
+	font: 16px HindMedium;
+}
+
+aside .latestPost{
+	color: #212121;
+}
+aside .latestPost .postText .info{
+	font: 14px HindLight;
+	color: #999999;
+}
+
+
+
+/* contactUs */
+
+main .mapWrapper .mapInfo {
+  font: 14px HindReg;
+  color: #424242;
+  line-height: 24px;
+}
+main .mapWrapper .mapInfo_title {
+  font: 20px Montserrat;
+  color: #424242;
+  line-height: 24px;
+}
+main .contactForm .textUser::-webkit-input-placeholder {
+  font: 14px HindReg;
+  color: #424242;
+  line-height: 24px;
+}
+main .contactForm .textUser:-ms-input-placeholder {
+  font: 14px HindReg;
+  color: #424242;
+  line-height: 24px;
+}
+main .contactForm .textUser::-ms-input-placeholder {
+  font: 14px HindReg;
+  color: #424242;
+  line-height: 24px;
+}
+main .contactForm .textUser::placeholder {
+  font: 14px HindReg;
+  color: #424242;
+  line-height: 24px;
+}
+main .contactForm .submit {
+  font: 12px MontseratBold;
+  color: #fff;
+  line-height: none;
+}
+
+
+
+/* detail */
+
+main .gotoArticle .goto {
+  color: #ffffff;
+}
+main .recommendedArticle {
+  font: 16px Montserrat;
+  color: #212121;
+  line-height: 24px;
+}
+main .recommendedArticle_rule span {
+  font-size: 20px;
+}
+main .recommendedArticle_rule .switchButton {
+  color: #fff;
+}
+
+
+
+/* footer */
+
+footer{
+	color: #ffffff;
+	font: 15px HindLight;
+}
+
+footer .copyrightInfo{
+	color: #ffffff;
+	font-size: 14px;
+}
+
+footer .footerInfo .info h6{
+	font: 16px MontserratBold;
+}
+
+footer .footerInfo .tweets .tweetsInfo{
+	font-size: 14px;
+}

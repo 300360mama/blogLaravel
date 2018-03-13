@@ -1,0 +1,138 @@
+
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(calc(-40vw + 34px));
+    transform: translateX(calc(-40vw + 34px));
+    visibility: visible;
+    background:transparent;
+    overflow: auto;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background: #202426;
+    overflow: auto;
+
+  }
+}
+
+
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+    visibility: visible;
+    background: #202426;
+    overflow: hidden;
+
+  }
+
+  to {
+    -webkit-transform: translate3d(calc(-40vw + 34px), 0, 0);
+    transform: translate3d(calc(-40vw + 34px), 0, 0);
+    background: transparent;
+    overflow: hidden;
+
+  }
+}
+
+
+
+/* top element */
+
+
+@keyframes closeTopElem {
+  from {
+   
+    transform: translateY(0px)  rotate(0deg);
+
+  }
+
+  to {
+
+    transform: translateY(10px) rotate(-45deg);
+  }
+}
+
+
+@keyframes closeTopElemReverse {
+  from {
+    transform:  translateY(10px) rotate(-45deg);
+
+
+  }
+
+  to {
+    transform: translateY(0px) rotate(0deg);
+
+  }
+}
+
+
+
+
+/* middle element */
+
+
+
+@keyframes hideMiddleElem {
+  from {
+    opacity: 1;
+    
+
+  }
+
+  to {
+    opacity: 0;
+
+  }
+}
+
+
+@keyframes hideMiddleElemReverse {
+  from {
+    opacity: 0;
+    
+
+  }
+
+  to {
+    opacity: 1;
+
+  }
+}
+
+
+
+
+/* bottom element */
+
+
+@keyframes closeBottomElem {
+  from {
+    transform: translateY(0px) rotate(0deg);
+    
+
+  }
+
+  to {
+    transform: translateY(-10px) rotate(45deg);
+
+  }
+}
+
+@keyframes closeBottomElemReverse {
+  from {
+    transform: translateY(-10px) rotate(45deg);
+    
+
+  }
+
+  to {
+    transform: translateY(0px) rotate(0deg);
+
+  }
+}
