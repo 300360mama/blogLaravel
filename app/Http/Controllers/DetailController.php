@@ -8,13 +8,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class DetailController extends Controller
 {
 
-    public function index(){
+    public function index(Request $request){
 
-        return view('detail');
+        $info = parent::sidebarInfo();
+
+        $idArticle = (int)$request->idArticle ? $request->idArticle : 1;
+
+
+        $article = Article::where('id',$idArticle)->first() ? Article::where('id',$idArticle)->first() : Article::where('id',1)->first();
+
+        $articlePrev  =  Article::select('id')->where('id',$idArticle-1)->first() ?  Article::select('id')->where('id',$idArticle-1)->first() : false;
+        $articleNext  =  Article::select('id')->where('id',$idArticle+1)->first() ?  Article::select('id')->where('id',$idArticle+1)->first() : false;
+
+        return view('detail', [
+                               'infoCategory'=>$info['infoCategory'],
+                               'latestPost'=>$info['latestPost'],
+                               'article'=>$article,
+                               'articlePrev'=>$articlePrev,
+                               'articleNext'=>$articleNext
+                              ]);
     }
 }

@@ -16,6 +16,8 @@ class ContactController extends Controller
 
     public function index(){
 
-        return view('contact');
+        $info = parent::sidebarInfo();
+
+        return view('contact', ['infoCategory'=>$info['infoCategory'], 'latestPost'=>$info['latestPost']]);
     }
 }

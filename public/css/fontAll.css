@@ -153,7 +153,7 @@ main .citacion .authorCitate{
 
 }
 
-aside .categories{
+aside .categories, aside .categories .listCategories a{
 	color: #212121;
 }
 
@@ -162,11 +162,12 @@ aside .categories h5, aside .latestPost h5{
 }
 
 aside .categories .listCategories,
-aside .latestPost .postText{
+aside .latestPost .postText,
+aside .latestPost .postText .sidebarArticle{
 	font: 16px HindMedium;
 }
 
-aside .latestPost{
+aside .latestPost, aside .latestPost .postText .sidebarArticle{
 	color: #212121;
 }
 aside .latestPost .postText .info{

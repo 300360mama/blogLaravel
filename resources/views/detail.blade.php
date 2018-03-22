@@ -34,52 +34,125 @@
 
 @section('main')
 	<main>
-				<section class="mapWrapper">
-					
-					<div class="map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5149.437141045789!2d27.791245489684446!3d49.8101583755345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1517696666866" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-					<div class="mapInfo">
-						<div class="mapInfo_title">
-						
-								Contact information
-							
-						</div>
-						<div class="mapInfo_text">
-							In case you some aquestions popped in your’s mind, FeIn case you some aquestions popped in your’el email or even visit us. 
-						</div>
-						<div class="mapInfo_social">
-							<section class="mapInfo_social_section">
-								<i class="fa fa-home"></i>
-								<span>
-									Address: 123 Street Name, City Name, United States.
-								</span>
-							</section>
-							<section class="mapInfo_social_section">
-								<i class="fa fa-envelope"></i>
-								<span>
-									Email: info@lifestyle.com
-								</span>
-							</section>
-							<section class="mapInfo_social_section">
-								<i class="fa fa-globe"></i>
-								<span>
-									www.lifestyle.com
-								</span>
-							</section>
-						</div>
-					</div>
+
+		<div class="post">
+			<img src="../images/content/pokemon_raichu.jpg" alt="">
+			<div class="article">
+				<section class="themeSection">
+					<span class="category">{{$article->title}}</span>
+					<h3 class="theme"></h3>
+					<section class="authorArticle">
+						<section class="authorName"> <i class="fa fa-user" aria-hidden="true"></i>
+							<span>{{$article->author->name}}</span>
+						</section>
+						<section class="publicationDate"> <i class="fa fa-calendar" aria-hidden="true"></i>
+							<time>{{$article->created_at->format('d M, Y')}}</time>
+						</section>
+
+					</section>
 				</section>
 
-				
-				<form action="" class="contactForm">
-					<input type="text" class="textUser userName" placeholder="Введите имя">
-					<input type="text" class="textUser userEmail" placeholder="Ваш email">
-					
-					<textarea type="text" class="textUser messageText" placeholder="Текст сообщения"></textarea> 
-					<input type="text" class="submit" value="Отправить">
-				</form>
-			</main>
+				<article>
+					{{$article->article}}
+				</article>
+
+
+			</div>
+
+			<section class="infoArticle">
+				<section class="comment">
+					<section>
+						<i class="fa fa-comments-o" aria-hidden="true"></i>
+						<i class="quantity">06</i>
+						<span>Comment</span>
+					</section>
+					<section>
+						<i class="fa fa-heart-o" aria-hidden="true"></i>
+						<i class="quantity">25</i>
+						<span>LIKE</span>
+					</section>
+				</section>
+
+				<section class="social">
+					<a href="" class="fa fa-facebook" aria-hidden="true"></a>
+					<a href="" class="fa fa-github" aria-hidden="true"></a>
+					<a href="" class="fa fa-vk" aria-hidden="true"></a>
+					<a href="" class="fa fa-instagram" aria-hidden="true"></a>
+				</section>
+			</section>
+		</div>
+
+		<div class="gotoArticle">
+
+            @if($articlePrev)
+
+                <a href="{{url('/detail/'.$articlePrev->id)}}" class="goto prevArticle">
+
+                    <i class="fa fa-long-arrow-left"></i>
+                    <span>Previous Article</span>
+                </a>
+            @else
+                <span class="goto prevArticle gotoDisabled" >
+
+                    <i class="fa fa-long-arrow-left"></i>
+                    <span>Previous Article</span>
+                </span>
+            @endif
+
+            @if($articleNext)
+                    <a href="{{url('/detail/'.$articleNext->id)}}" class="goto nextArticle" >
+                        <span>Next Article</span>
+                        <i class="fa fa-long-arrow-right"></i>
+                    </a>
+            @else
+                    <span class="goto nextArticle gotoDisabled" >
+                        <span>Next Article</span>
+                        <i class="fa fa-long-arrow-right"></i>
+                    </span>
+            @endif
+
+
+
+		</div>
+
+		<div class="recommendedArticle">
+			<section class="recommendedArticle_rule">
+						<span>
+							Recomended Posts
+						</span>
+				<section class="switchButton">
+					<i class="fa fa-long-arrow-left"></i>
+					<i class="fa fa-long-arrow-right"></i>
+				</section>
+			</section>
+			<section class="recommendedArticle_wrapper">
+				<section class="recommendedArticle_post">
+					<img src="../images/content/rectangle-53.png" alt="">
+					<span class="recommendedArticle_post_title">
+								girl on car vintage fashion
+							</span>
+				</section>
+				<section class="recommendedArticle_post">
+					<img src="../images/content/rectangle-53.png" alt="">
+					<span class="recommendedArticle_post_title">
+								women make a tea for cup
+							</span>
+				</section>
+				<section class="recommendedArticle_post">
+					<img src="../images/content/rectangle-53.png" alt="">
+					<span class="recommendedArticle_post_title">
+								girl on car vintage fashion
+							</span>
+				</section>
+				<section class="recommendedArticle_post">
+					<img src="../images/content/rectangle-53.png" alt="">
+					<span class="recommendedArticle_post_title">
+								i found the model 1980’s car
+							</span>
+				</section>
+			</section>
+		</div>
+	</main>
 @endsection
 
 

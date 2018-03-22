@@ -13,8 +13,9 @@ use App\Http\Controllers\Controller;
 class AboutController extends Controller
 {
     public function index(){
+        $info = parent::sidebarInfo();
 
-        return view('about');
+        return view('about', ['infoCategory'=>$info['infoCategory'], 'latestPost'=>$info['latestPost']]);
     }
 
 }

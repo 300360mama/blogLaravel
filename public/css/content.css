@@ -121,7 +121,6 @@ header .social{
 }
 
 
-
 .switchSlide .box .rectangle{
 	width: 5px;
 	height: 5px;
@@ -331,6 +330,22 @@ main .citacion{
 }
 
 
+main .pagination{
+	display: flex;
+}
+main .pagination li{
+	font-size:18px;
+	color:grey;
+	background-color: #000000;
+	padding: 5px 8px;
+	margin-right: 10px;
+
+
+}
+
+main .pagination li a{
+	color: #ffffff;
+}
 
 
 /* Details */
@@ -354,6 +369,14 @@ main .gotoArticle .goto:hover {
 }
 main .gotoArticle .goto .fa {
   margin: 0 10px;
+}
+
+main .gotoArticle .gotoDisabled{
+	background-color: #5e5e5e;
+}
+
+main .gotoArticle .gotoDisabled:hover{
+	background-color: #5e5e5e;
 }
 main .recommendedArticle {
   width: 100%;
@@ -415,6 +438,10 @@ aside .asideInner{
 	margin-bottom: 40px;
 }
 
+aside #searchArticle .submit:hover{
+	cursor:pointer;
+
+}
 aside .asideInner>img{
 	width: 100%;
 }
