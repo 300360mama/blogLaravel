@@ -9,6 +9,6 @@ class Category extends Model
     protected $table = 'categories';
 
     public function article(){
-        return $this->hasOne('App\Article', 'category_id');
+        return $this->hasMany('App\Article', 'category_id');
     }
 }

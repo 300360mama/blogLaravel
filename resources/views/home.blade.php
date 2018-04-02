@@ -1,36 +1,6 @@
 @extends('layots')
-
-@section('banner')
-	<div class="banner">
-			<section class="bannerNews">
-				<span>Latest News</span>
-				<h6>BODYBUILDING BEST FOR YOU HEALTH</h6>
-			</section>
-			<section class="switchSlide">
-				<section class="box">
-					<span class="rectangle active"></span>
-					<span class="rectangle"></span>
-					<span class="rectangle"></span>
-				</section>
-				<section class="switch">
-					<a href="" class="fa fa-long-arrow-up prevSlide arrow" aria-hidden="true"></a>
-					<span class="text">Article Featured</span>
-					<a href="" class="fa fa-long-arrow-down nextSlide arrow" aria-hidden="true"></a>
-				</section>
-			</section>
-		</div>
-@endsection
-
-@section('newsLetter')
-    <div class="newsLetter">
-			<form class="myForm" action="" method="post">
-				<span>Signup to Newsletter</span>
-				<input class="info" type="text" placeholder="Ваше имя">
-				<input class="info" type="email" placeholder="Ваш email адресс">
-				<input class="submit" type="submit" value="Отправить сейчас"></form>
-		</div>
-
-@endsection
+@extends('banner')
+@extends('newsLetter')
 
 @section('main')
 	<main>
@@ -66,14 +36,14 @@
 					<section class="comment">
 						<section>
 							<i class="fa fa-comments-o" aria-hidden="true"></i>
-							<i class="quantity">06</i>
+							<i class="quantity">{{$article->comments()->count()}}</i>
 							<span>Comment</span>
 						</section>
-						<section>
+						{{--<section>
 							<i class="fa fa-heart-o" aria-hidden="true"></i>
 							<i class="quantity">25</i>
 							<span>LIKE</span>
-						</section>
+						</section>--}}
 					</section>
 
 					<section class="social">

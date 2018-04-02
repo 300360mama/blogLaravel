@@ -1,0 +1,41 @@
+main .album{
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-content: flex-start;
+	flex-wrap: wrap;
+
+}
+
+main .album .album_section{
+	margin-bottom: 10px;
+	width: 20%;
+	border: 1px solid #979797;
+	display: flex;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	padding: 5px;
+	transition:all 0.5s;
+	
+
+}
+
+main .album .album_section:hover{
+
+	transform: scale(1.1);
+	transform-origin:top;
+	box-shadow:5px 5px 10px #C8C6C6;
+}
+
+main .album .album_section img{
+	width: 100%;
+	
+}
+
+
+
+main .album .album_section .album_name{
+	cursor: pointer;
+}

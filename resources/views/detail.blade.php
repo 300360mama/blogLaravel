@@ -1,40 +1,10 @@
 @extends('layots')
+@extends('banner')
+@extends('newsLetter')
 
-@section('banner')
-	<div class="banner">
-			<section class="bannerNews">
-				<span>Latest News</span>
-				<h6>BODYBUILDING BEST FOR YOU HEALTH</h6>
-			</section>
-			<section class="switchSlide">
-				<section class="box">
-					<span class="rectangle active"></span>
-					<span class="rectangle"></span>
-					<span class="rectangle"></span>
-				</section>
-				<section class="switch">
-					<a href="" class="fa fa-long-arrow-up prevSlide arrow" aria-hidden="true"></a>
-					<span class="text">Article Featured</span>
-					<a href="" class="fa fa-long-arrow-down nextSlide arrow" aria-hidden="true"></a>
-				</section>
-			</section>
-		</div>
-@endsection
-
-@section('newsLetter')
-    <div class="newsLetter">
-			<form class="myForm" action="" method="post">
-				<span>Signup to Newsletter</span>
-				<input class="info" type="text" placeholder="Ваше имя">
-				<input class="info" type="email" placeholder="Ваш email адресс">
-				<input class="submit" type="submit" value="Отправить сейчас"></form>
-		</div>
-
-@endsection
 
 @section('main')
 	<main>
-
 		<div class="post">
 			<img src="../images/content/pokemon_raichu.jpg" alt="">
 			<div class="article">
@@ -63,7 +33,7 @@
 				<section class="comment">
 					<section>
 						<i class="fa fa-comments-o" aria-hidden="true"></i>
-						<i class="quantity">06</i>
+						<i class="quantity">{{$article->comments()->count()}}</i>
 						<span>Comment</span>
 					</section>
 					<section>
@@ -81,7 +51,6 @@
 				</section>
 			</section>
 		</div>
-
 		<div class="gotoArticle">
 
             @if($articlePrev)
@@ -114,7 +83,14 @@
 
 
 		</div>
-
+		<div id="comment_article">
+				<form action="">
+					<input id="comment_article_name" type="text" placeholder="Ваше имя">
+					<input id="comment_article_email" type="email" placeholder="Укажите ваш email адресс">
+					<textarea id="comment_article_text" type="text" placeholder="Введите комментарий"></textarea>
+					<input type="submit">
+				</form>
+			</div>
 		<div class="recommendedArticle">
 			<section class="recommendedArticle_rule">
 						<span>
@@ -154,6 +130,10 @@
 		</div>
 	</main>
 @endsection
+
+
+
+
 
 
 

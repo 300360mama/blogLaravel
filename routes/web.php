@@ -3,6 +3,7 @@
 
 
 Route::get('/', 'HomeController@index');
+Route::get('/gallery', 'GalleryController@show');
 
 Route::get('home/{category?}', 'HomeController@index');
 Route::post('home/searchArticle', 'HomeController@search');

@@ -378,6 +378,34 @@ main .gotoArticle .gotoDisabled{
 main .gotoArticle .gotoDisabled:hover{
 	background-color: #5e5e5e;
 }
+
+
+main #comment_article{
+	width: 100%;
+	margin: 20px 0;
+
+}
+
+main #comment_article form{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+main #comment_article #comment_article_email,
+main #comment_article #comment_article_name{
+	width: 45%;
+
+}
+
+main #comment_article #comment_article_text{
+	width: 100%;
+
+}
+
+
+
 main .recommendedArticle {
   width: 100%;
   display: flex;
