@@ -18,6 +18,6 @@ class ContactController extends Controller
 
         $info = parent::sidebarInfo();
 
-        return view('contact', ['infoCategory'=>$info['infoCategory'], 'latestPost'=>$info['latestPost']]);
+        return view('blog.contact', ['infoCategory'=>$info['infoCategory'], 'latestPost'=>$info['latestPost']]);
     }
 }

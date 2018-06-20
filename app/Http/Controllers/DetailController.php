@@ -18,16 +18,12 @@ class DetailController extends Controller
     public function index(Request $request){
 
         $info = parent::sidebarInfo();
-
         $idArticle = (int)$request->idArticle ? $request->idArticle : 1;
-
-
         $article = Article::where('id',$idArticle)->first() ? Article::where('id',$idArticle)->first() : Article::where('id',1)->first();
+        $articlePrev  =  Article::select('id')->where('id','<', $idArticle)->first() ?  Article::select('id')->where('id','<', $idArticle)->first() : false;
+        $articleNext  =  Article::select('id')->where('id','>', $idArticle)->first() ?  Article::select('id')->where('id','>', $idArticle)->first() : false;
 
-        $articlePrev  =  Article::select('id')->where('id',$idArticle-1)->first() ?  Article::select('id')->where('id',$idArticle-1)->first() : false;
-        $articleNext  =  Article::select('id')->where('id',$idArticle+1)->first() ?  Article::select('id')->where('id',$idArticle+1)->first() : false;
-
-        return view('detail', [
+        return view('blog.detail', [
                                'infoCategory'=>$info['infoCategory'],
                                'latestPost'=>$info['latestPost'],
                                'article'=>$article,

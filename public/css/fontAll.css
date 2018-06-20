@@ -106,7 +106,7 @@ header .logo{
 
 /* content main */
 
-.post .article .category, .article .authorArticle, 
+.post .article .category, .article .authorArticle,
 .post .article .infoArticle{
 	font: 16px HindReg;
 	color: #999999;
@@ -149,7 +149,7 @@ main .citacion .myCitate{
 main .citacion .authorCitate{
 	font: 16px HindReg;
 	color: #999999;
-	
+
 
 }
 
@@ -232,6 +232,16 @@ main .recommendedArticle_rule span {
 }
 main .recommendedArticle_rule .switchButton {
   color: #fff;
+}
+
+main #comment_article .comment_input::placeholder{
+    color: #999999;
+	font: 15px HindLight;
+}
+
+main #comment_article .submit_comment{
+    color: #ffffff;
+    font: 14px HindMedium;
 }
 
 

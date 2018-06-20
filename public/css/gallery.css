@@ -1,14 +1,16 @@
-main .album{
+main .gallery{
 	width: 100%;
 	padding: 15px;
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 	align-content: flex-start;
 	flex-wrap: wrap;
 
 }
 
-main .album .album_section{
+/** Gallery List Alums **/
+main .gallery .album_section{
 	margin-bottom: 10px;
 	width: 20%;
 	border: 1px solid #979797;
@@ -18,24 +20,74 @@ main .album .album_section{
 	align-items: center;
 	padding: 5px;
 	transition:all 0.5s;
-	
+
 
 }
 
-main .album .album_section:hover{
+main .gallery .album_section:hover{
 
 	transform: scale(1.1);
 	transform-origin:top;
 	box-shadow:5px 5px 10px #C8C6C6;
 }
 
-main .album .album_section img{
+main .gallery .album_section img{
 	width: 100%;
-	
+
+}
+
+main .gallery .album_section .album_name{
+	cursor: pointer;
+}
+
+/** Gallery List Photo**/
+main .gallery .photo{
+	width: 22%;
+	max-height: 300px;
 }
 
 
+main .gallery .img_block{
+	width: calc(25% - 10px);
+	padding: 5px;
+}
 
-main .album .album_section .album_name{
-	cursor: pointer;
+
+main .gallery .img_block img{
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s;
+}
+
+main .gallery .img_block img:hover{
+	box-shadow:5px 5px 10px #C8C6C6;
+	transform: scale(1.05);
+	transform-origin: top;
+
+}
+
+
+@media all and (max-width: 992px){
+	main .gallery .img_block{
+		width: calc(30% - 10px);
+
+    }
+
+}
+
+
+@media all and (max-width: 768px){
+	main .gallery .img_block{
+		width: calc(50% - 10px);
+
+    }
+
+}
+
+
+@media all and (max-width: 425px){
+	main .gallery .img_block{
+		width: calc(100% - 10px);
+
+    }
 }
