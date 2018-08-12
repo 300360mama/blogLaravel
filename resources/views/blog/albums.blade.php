@@ -14,12 +14,12 @@
 		@foreach ($albums as $album)
 			<figure class="album_section">
 
-			<a  href="{{ url('gallery/'.$album->name) }}">
-			    <img src="./images/rectangle-53.png" alt="">
+			<a  href="{{ url('gallery/'.$album) }}">
+			    <img src="./images/rectangle-53.png" alt="{{ $album }}">
 		    </a>
 		    <figcaption>
-		    	<a class="album_name" href="{{ url('gallery/'.$album->name) }}">
-		    	    {{$album->name}}
+		    	<a class="album_name" href="{{ url('gallery/'.$album) }}">
+		    	    {{$album}}
 		    	</a>
 		    </figcaption>
 		</figure>

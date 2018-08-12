@@ -24,11 +24,7 @@ class BlogController extends Controller
             $articles = Article::select()->orderBy('created_at', 'asc')->paginate(2);
         }
 
-
-
-
-
-        return view('blog..blog', [
+        return view('blog.blog', [
                              'infoCategory'=>$info['infoCategory'],
                              'latestPost'=>$info['latestPost'],
                              'articles'=>$articles

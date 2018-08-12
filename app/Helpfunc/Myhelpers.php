@@ -33,21 +33,30 @@ class Myhelpers
     }
 
 
+    /*
+     * [get_select_key description]
+     * @param  array  $list_foreign_table [description]
+     * @return array of object                    arr['table_name'=>'selected data of foreign key']
+     */
     public static function get_select_key(array $list_foreign_table){
         $res = [];
 
         foreach ($list_foreign_table as $table) {
-            $query =  DB::select("SELECT id, name FROM $table");
+            $query =  DB::table($table)->select("id", "name")->get();
             $res[$table] = $query;
 
         }
 
         return $res;
 
-
     }
 
 
+    /*
+     * [is_empty description]
+     * @param  array   $data [description]
+     * @return boolean       true || false
+     */
     public static function is_empty(array $data){
 
         if(empty($data)) return false;
@@ -60,4 +69,6 @@ class Myhelpers
 
         return $res;
     }
+
+    
 }

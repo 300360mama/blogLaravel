@@ -8,8 +8,8 @@ Route::get('/detail/{idArticle?}', 'BlogController@detail')->name('blog_detail')
 Route::get('/about', 'AboutController@index')->name('blog_about');
 
 Route::get('contact', 'ContactController@index')->name('blog_contact');
-Route::get('/gallery', 'GalleryController@listAlbums');
-Route::get('/gallery/{album}', 'GalleryController@showAlbum');
+Route::get('/gallery', 'GalleryController@showAlbums');
+Route::get('/gallery/{album}', 'GalleryController@showPhotos');
 
 // Admin Routes
 Auth::routes();

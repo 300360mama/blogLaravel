@@ -11,10 +11,11 @@
 <main>
 	<div class="gallery">
 
-    @foreach($photos as $photo)
+
+    @foreach($photos as $path=>$photo)
 
     <div class="img_block">
-      <img src="{{$photo->path_to_photo}}" alt="{{$photo->alias}}">
+      <img src="{{$path}}" alt="{{$photo}}">
     </div>
 
 

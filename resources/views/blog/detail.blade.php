@@ -1,7 +1,5 @@
 @extends('layouts.myblog')
 @extends('blog.banner')
-@extends('blog.newsLetter')
-
 
 @section('main')
 	<main>
@@ -52,7 +50,7 @@
 			</section>
 		</div>
 		<div class="gotoArticle">
-			
+
 
             @if($articlePrev)
 

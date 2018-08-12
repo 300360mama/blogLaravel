@@ -46,7 +46,7 @@
 
 @keyframes closeTopElem {
   from {
-   
+
     transform: translateY(0px)  rotate(0deg);
 
   }
@@ -81,7 +81,7 @@
 @keyframes hideMiddleElem {
   from {
     opacity: 1;
-    
+
 
   }
 
@@ -95,7 +95,7 @@
 @keyframes hideMiddleElemReverse {
   from {
     opacity: 0;
-    
+
 
   }
 
@@ -114,7 +114,7 @@
 @keyframes closeBottomElem {
   from {
     transform: translateY(0px) rotate(0deg);
-    
+
 
   }
 
@@ -127,7 +127,7 @@
 @keyframes closeBottomElemReverse {
   from {
     transform: translateY(-10px) rotate(45deg);
-    
+
 
   }
 
@@ -135,4 +135,11 @@
     transform: translateY(0px) rotate(0deg);
 
   }
+}
+
+
+/*  Animation slider */
+
+@keyframes  {
+
 }

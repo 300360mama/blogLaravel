@@ -1,6 +1,6 @@
 @extends('layouts.myblog')
 @extends('blog.banner')
-@extends('blog.newsLetter')
+
 
 @section('main')
 	<main>
@@ -26,7 +26,7 @@
 					</section>
 
 					<article>
-						{{substr($article->article,0, 400)}}
+						{!! substr($article->article,0, 400) !!}
 					</article>
 
 					<a class="readMore" href="/detail/{{$article->id}}">Читать далее...</a>
@@ -57,10 +57,9 @@
 
             @if($loop->index == 1)
                 <section class="citacion">
-                    <q class="myCitate">
-                        It's about having an actives lifestyles, staying of’shealthy powers, and making the right decisions. Life is bes about balance. Not everybody wants to run a marathon, but we extra have a now days flight of stairs.
-                    </q>
-                    <span class="authorCitate">Apolo Ohno</span>
+                    <span class="myCitate">
+                        Мы говорим с тобой на разных языках, как всегда, но вещи, о которых мы говорим, от этого не меняются.
+                    <span class="authorCitate">Михаил Булгаков</span>
                 </section>
             @endif
 
